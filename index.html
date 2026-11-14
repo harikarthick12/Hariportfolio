@@ -106,6 +106,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <link rel='stylesheet' id='elementor-gf-robotoslab-css' href='https://fonts.googleapis.com/css?family=Roboto+Slab:100,100italic,200,200italic,300,300italic,400,400italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic&#038;display=swap' media='all' />
 <link rel='stylesheet' id='elementor-gf-poppins-css' href='https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,400,400italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic&#038;display=swap' media='all' />
 <link rel='stylesheet' id='google-material-icons-css' href='https://fonts.googleapis.com/icon?family=Material+Icons' media='all' />
+<link rel='stylesheet' id='google-fonts-curly-css' href='https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,500;1,600;1,700&family=Cormorant+Garamond:ital,wght@1,400;1,500;1,600&display=swap' media='all' />
 <link rel='stylesheet' id='elementor-icons-material-design-icons-css' href='/fonts/material-icons-regular.css' media='all' />
 <script id="jquery-core-js" src="/assets/vendor/wp/jquery.min.js"></script>
 <script id="jquery-migrate-js" src="/assets/vendor/wp/jquery-migrate.min.js"></script>
@@ -422,15 +423,67 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
   /* ==================================================
      Visual Archive Waterfall & Sticky Layout (masonry waterfall style)
      ================================================== */
-  .elementor-element.elementor-element-05f083c {
+  .elementor-element.elementor-element-05f083c,
+  .elementor-9903 .elementor-element.elementor-element-05f083c,
+  .elementor-9903 .elementor-element.elementor-element-05f083c:not(.elementor-motion-effects-element-type-background),
+  .elementor-9903 .elementor-element.elementor-element-05f083c > .elementor-motion-effects-container > .elementor-motion-effects-layer {
     position: relative !important;
     display: block !important;
     width: 100% !important;
-    background-color: #FFFFFF !important;
+    background-color: transparent !important;
+    background: transparent !important;
     min-height: 100vh !important;
     overflow: visible !important;
     padding: 0 !important;
     margin: 0 !important;
+  }
+
+  /* Seamless Page Sections - Eliminates stark white & black background blocks */
+  .elementor-9903 .elementor-element.elementor-element-e60925f,
+  .elementor-element.elementor-element-e60925f,
+  .elementor-9903 .elementor-element.elementor-element-e60925f:not(.elementor-motion-effects-element-type-background),
+  .elementor-9903 .elementor-element.elementor-element-e60925f > .elementor-motion-effects-container > .elementor-motion-effects-layer {
+    background-color: transparent !important;
+    background: transparent !important;
+  }
+
+  .elementor-9903 .elementor-element.elementor-element-e7bf2c1,
+  .elementor-element.elementor-element-e7bf2c1,
+  .elementor-9903 .elementor-element.elementor-element-e7bf2c1:not(.elementor-motion-effects-element-type-background),
+  .elementor-9903 .elementor-element.elementor-element-e7bf2c1 > .elementor-motion-effects-container > .elementor-motion-effects-layer {
+    background-color: transparent !important;
+    background: transparent !important;
+  }
+
+  /* Beyond the Visuals Heading on light background */
+  .elementor-element.elementor-element-af59bb9 .hk-beyond-title {
+    color: #191919 !important;
+    -webkit-text-stroke: 1px rgba(25, 25, 25, 0.25) !important;
+  }
+
+  /* Beyond the Visuals Tabs - Remove black background, blend seamlessly */
+  .elementor-9903 .elementor-element.elementor-element-e7812e2 > .e-n-tabs > .e-n-tabs-heading > .e-n-tab-title,
+  .elementor-element.elementor-element-e7812e2 .e-n-tab-title {
+    background: rgba(25, 25, 25, 0.05) !important;
+    color: #191919 !important;
+    border: 1.5px solid rgba(25, 25, 25, 0.15) !important;
+    box-shadow: none !important;
+    transition: all 0.3s ease !important;
+  }
+  .elementor-9903 .elementor-element.elementor-element-e7812e2 > .e-n-tabs > .e-n-tabs-heading > .e-n-tab-title[aria-selected="true"],
+  .elementor-element.elementor-element-e7812e2 .e-n-tab-title[aria-selected="true"] {
+    background: #191919 !important;
+    color: #F2E7DA !important;
+    border-color: #191919 !important;
+    box-shadow: 0 6px 18px rgba(25, 25, 25, 0.15) !important;
+  }
+  .elementor-element.elementor-element-e7812e2 .e-n-tab-title:hover {
+    background: rgba(25, 25, 25, 0.1) !important;
+    border-color: rgba(25, 25, 25, 0.3) !important;
+  }
+  .elementor-element.elementor-element-e7812e2 .e-n-tab-title[aria-selected="true"]:hover {
+    background: #000000 !important;
+    color: #FFFFFF !important;
   }
   .elementor-sticky__spacer {
     display: none !important;
@@ -670,6 +723,280 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
     transform: scale(1.08) !important;
     filter: drop-shadow(0 24px 40px rgba(0, 0, 0, 0.28));
   }
+
+  /* ==================================================
+     Packaging & Label Designing Showcase (Tab 4 - Blended directly to screen)
+     ================================================== */
+  #e-n-tab-content-2427501784 {
+    --content-width: 88% !important;
+    max-width: 1320px !important;
+    margin: 0 auto !important;
+    width: 100% !important;
+  }
+  .hk-pkg-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 52px;
+    padding: 16px 0 36px;
+    box-sizing: border-box;
+    font-family: inherit;
+  }
+  .hk-pkg-intro {
+    text-align: center;
+    max-width: 780px;
+    margin: 0 auto;
+    padding: 0 16px;
+  }
+  /* Eyebrows: NO pill shape, blended directly to screen with adapted color */
+  .hk-pkg-eyebrow {
+    display: block;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: #7d6a55;
+    background: transparent !important;
+    border: none !important;
+    border-radius: 0 !important;
+    padding: 0 !important;
+    margin-bottom: 8px;
+  }
+  .hk-pkg-eyebrow::before {
+    display: none !important;
+  }
+
+  /* Curly-based Typography for titles & descriptions */
+  .hk-pkg-curly-title {
+    font-family: 'Playfair Display', Georgia, 'Times New Roman', serif;
+    font-style: italic;
+    font-size: 40px;
+    font-weight: 600;
+    color: #191919;
+    letter-spacing: -0.01em;
+    margin: 0 0 12px;
+    line-height: 1.25;
+  }
+  .hk-pkg-curly-desc {
+    font-family: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
+    font-style: italic;
+    font-size: 20px;
+    color: #4a433c;
+    line-height: 1.55;
+    margin: 0 auto;
+    max-width: 720px;
+  }
+
+  /* 6 Hero Products Grid - NO black cards, blended directly to screen */
+  .hk-pkg-hero-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 36px 28px;
+    width: 100%;
+  }
+  .hk-pkg-card {
+    position: relative;
+    background: transparent !important;
+    border: none !important;
+    border-radius: 0 !important;
+    padding: 10px;
+    box-shadow: none !important;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    cursor: default;
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    will-change: transform;
+  }
+  .hk-pkg-card:hover {
+    transform: translateY(-8px);
+  }
+  .hk-pkg-card-img-wrap {
+    position: relative;
+    width: 100%;
+    height: 320px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 16px;
+  }
+  .hk-pkg-card-img-wrap img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    filter: drop-shadow(0 18px 24px rgba(0, 0, 0, 0.16));
+    transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1), filter 0.4s ease;
+  }
+  .hk-pkg-card:hover .hk-pkg-card-img-wrap img {
+    transform: scale(1.06);
+    filter: drop-shadow(0 26px 36px rgba(0, 0, 0, 0.25));
+  }
+  .hk-pkg-card-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    width: 100%;
+    border-top: none !important;
+    padding-top: 0 !important;
+  }
+  .hk-pkg-card-brand {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: #7d6a55;
+  }
+  .hk-pkg-card-name {
+    font-size: 19px;
+    font-weight: 600;
+    color: #191919;
+    margin: 0;
+    line-height: 1.3;
+  }
+  .hk-pkg-card-meta {
+    font-size: 13px;
+    color: #55504a;
+    margin: 0;
+  }
+
+  /* 8 Separated Products Grid - NO black cards, blended directly to screen */
+  .hk-pkg-eight-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 28px 20px;
+    width: 100%;
+  }
+  .hk-pkg-mini-card {
+    position: relative;
+    background: transparent !important;
+    border: none !important;
+    border-radius: 0 !important;
+    padding: 10px;
+    box-shadow: none !important;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    cursor: default;
+    transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .hk-pkg-mini-card:hover {
+    transform: translateY(-6px);
+  }
+  .hk-pkg-mini-img-wrap {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 12px;
+  }
+  .hk-pkg-mini-img-wrap img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    filter: drop-shadow(0 12px 18px rgba(0, 0, 0, 0.14));
+    transition: transform 0.35s ease, filter 0.35s ease;
+  }
+  .hk-pkg-mini-card:hover .hk-pkg-mini-img-wrap img {
+    transform: scale(1.08);
+    filter: drop-shadow(0 18px 26px rgba(0, 0, 0, 0.22));
+  }
+  .hk-pkg-mini-brand {
+    font-size: 10.5px;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: #7d6a55;
+    margin-bottom: 3px;
+  }
+  .hk-pkg-mini-title {
+    font-size: 15.5px;
+    font-weight: 600;
+    color: #191919;
+    margin: 0 0 4px;
+    line-height: 1.25;
+  }
+  .hk-pkg-mini-badge {
+    font-size: 11.5px;
+    font-weight: 500;
+    color: #55504a;
+  }
+
+  /* Action button area */
+  .hk-pkg-action {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 24px 0 10px;
+    width: 100%;
+  }
+
+  
+  /* ==================================================
+     Footer Layout & Credits Alignment
+     ================================================== */
+  .elementor-1710 .elementor-element.elementor-element-021d603 {
+    --margin-top: 0px !important;
+    margin-top: 40px !important;
+    padding-top: 20px !important;
+    padding-bottom: 35px !important;
+    position: relative !important;
+    z-index: 10 !important;
+  }
+
+  /* Responsive Breakpoints */
+  @media (max-width: 1080px) {
+    .hk-pkg-hero-grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 28px 20px;
+    }
+    .hk-pkg-eight-grid {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px 16px;
+    }
+    .hk-pkg-curly-title {
+      font-size: 32px;
+    }
+    .hk-pkg-curly-desc {
+      font-size: 18px;
+    }
+  }
+  @media (max-width: 768px) {
+    #e-n-tab-content-2427501784 {
+      --content-width: 100% !important;
+      padding: 0 12px !important;
+    }
+    .hk-pkg-hero-grid {
+      grid-template-columns: 1fr;
+      gap: 24px;
+    }
+    .hk-pkg-eight-grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px 12px;
+    }
+    .hk-pkg-curly-title {
+      font-size: 26px;
+    }
+    .hk-pkg-curly-desc {
+      font-size: 16px;
+    }
+    .hk-pkg-card-img-wrap {
+      height: 260px;
+    }
+    .hk-pkg-mini-img-wrap {
+      height: 170px;
+    }
+  }
+  @media (max-width: 480px) {
+    .hk-pkg-eight-grid {
+      grid-template-columns: 1fr;
+      gap: 16px;
+    }
+  }
 </style>
 
 </head>
@@ -750,7 +1077,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 	
 	<div class="entry-content">
 				<div data-elementor-type="wp-page" data-elementor-id="9903" class="elementor elementor-9903" data-elementor-settings="{&quot;element_pack_global_tooltip_width&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;element_pack_global_tooltip_width_tablet&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;element_pack_global_tooltip_width_mobile&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;element_pack_global_tooltip_padding&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;top&quot;:&quot;&quot;,&quot;right&quot;:&quot;&quot;,&quot;bottom&quot;:&quot;&quot;,&quot;left&quot;:&quot;&quot;,&quot;isLinked&quot;:true},&quot;element_pack_global_tooltip_padding_tablet&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;top&quot;:&quot;&quot;,&quot;right&quot;:&quot;&quot;,&quot;bottom&quot;:&quot;&quot;,&quot;left&quot;:&quot;&quot;,&quot;isLinked&quot;:true},&quot;element_pack_global_tooltip_padding_mobile&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;top&quot;:&quot;&quot;,&quot;right&quot;:&quot;&quot;,&quot;bottom&quot;:&quot;&quot;,&quot;left&quot;:&quot;&quot;,&quot;isLinked&quot;:true},&quot;element_pack_global_tooltip_border_radius&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;top&quot;:&quot;&quot;,&quot;right&quot;:&quot;&quot;,&quot;bottom&quot;:&quot;&quot;,&quot;left&quot;:&quot;&quot;,&quot;isLinked&quot;:true},&quot;element_pack_global_tooltip_border_radius_tablet&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;top&quot;:&quot;&quot;,&quot;right&quot;:&quot;&quot;,&quot;bottom&quot;:&quot;&quot;,&quot;left&quot;:&quot;&quot;,&quot;isLinked&quot;:true},&quot;element_pack_global_tooltip_border_radius_mobile&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;top&quot;:&quot;&quot;,&quot;right&quot;:&quot;&quot;,&quot;bottom&quot;:&quot;&quot;,&quot;left&quot;:&quot;&quot;,&quot;isLinked&quot;:true}}" data-elementor-post-type="page">
-				<div class="anim-bg elementor-element elementor-element-6702bd0 e-con-full elementor-hidden-tablet elementor-hidden-mobile wrapper-wide section-normal e-flex default e-con e-parent" data-id="6702bd0" data-element_type="container" data-e-type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+				<div class="elementor-element elementor-element-6702bd0 e-con-full elementor-hidden-tablet elementor-hidden-mobile wrapper-wide section-normal e-flex default e-con e-parent" data-id="6702bd0" data-element_type="container" data-e-type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
 		<div class="elementor-element elementor-element-9a4ce7a wrapper-wide section-normal e-flex e-con-boxed default e-con e-child" data-id="9a4ce7a" data-element_type="container" data-e-type="container">
 					<div class="e-con-inner">
 				<div class="elementor-element elementor-element-eff4801 elementor-widget__width-initial elementor-widget elementor-widget-heading" data-id="eff4801" data-element_type="widget" data-e-type="widget" data-settings="{&quot;motion_fx_motion_fx_scrolling&quot;:&quot;yes&quot;,&quot;motion_fx_translateY_effect&quot;:&quot;yes&quot;,&quot;motion_fx_translateY_direction&quot;:&quot;negative&quot;,&quot;motion_fx_translateY_speed&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:1.5,&quot;sizes&quot;:[]},&quot;motion_fx_translateY_affectedRange&quot;:{&quot;unit&quot;:&quot;%&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:{&quot;start&quot;:0,&quot;end&quot;:100}},&quot;motion_fx_devices&quot;:[&quot;desktop&quot;,&quot;tablet&quot;,&quot;mobile&quot;]}" data-widget_type="heading.default">
@@ -842,7 +1169,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 				</div>
 				</div>
 				</div>
-		<div class="anim-bg elementor-element elementor-element-e60925f e-con-full elementor-hidden-tablet elementor-hidden-mobile wrapper-wide section-normal e-flex default e-con e-parent" data-id="e60925f" data-element_type="container" data-e-type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+		<div class="elementor-element elementor-element-e60925f e-con-full elementor-hidden-tablet elementor-hidden-mobile wrapper-wide section-normal e-flex default e-con e-parent" data-id="e60925f" data-element_type="container" data-e-type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
 				<div class="blend elementor-element elementor-element-869a338 elementor-widget elementor-widget-naylatextwrapper" data-id="869a338" data-element_type="widget" data-e-type="widget" data-settings="{&quot;motion_fx_motion_fx_scrolling&quot;:&quot;yes&quot;,&quot;motion_fx_scale_effect&quot;:&quot;yes&quot;,&quot;motion_fx_scale_direction&quot;:&quot;in-out&quot;,&quot;motion_fx_scale_speed&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:1,&quot;sizes&quot;:[]},&quot;motion_fx_scale_range&quot;:{&quot;unit&quot;:&quot;%&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:{&quot;start&quot;:20,&quot;end&quot;:80}},&quot;motion_fx_devices&quot;:[&quot;desktop&quot;,&quot;tablet&quot;,&quot;mobile&quot;]}" data-widget_type="naylatextwrapper.default">
 				<div class="elementor-widget-container">
 					
@@ -883,7 +1210,7 @@ I combine technical expertise with creative thinking to build intuitive, scalabl
 				</div>
 				</div>
 				</div>
-		<div class="anim-bg elementor-element elementor-element-9d1643e e-con-full elementor-hidden-tablet elementor-hidden-mobile wrapper-wide section-normal e-flex default e-con e-parent" data-id="9d1643e" data-element_type="container" data-e-type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+		<div class="elementor-element elementor-element-9d1643e e-con-full elementor-hidden-tablet elementor-hidden-mobile wrapper-wide section-normal e-flex default e-con e-parent" data-id="9d1643e" data-element_type="container" data-e-type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
 		<div class="elementor-element elementor-element-5e5c9cb e-con-full wrapper-wide section-normal e-flex default e-con e-child" data-id="5e5c9cb" data-element_type="container" data-e-type="container">
 				<div class="elementor-element elementor-element-16e06aa elementor-widget elementor-widget-naylatextwrapper" data-id="16e06aa" data-element_type="widget" data-e-type="widget" data-settings="{&quot;motion_fx_motion_fx_scrolling&quot;:&quot;yes&quot;,&quot;motion_fx_translateY_effect&quot;:&quot;yes&quot;,&quot;motion_fx_translateY_speed&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:2,&quot;sizes&quot;:[]},&quot;motion_fx_translateY_affectedRange&quot;:{&quot;unit&quot;:&quot;%&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:{&quot;start&quot;:0,&quot;end&quot;:73}},&quot;motion_fx_scale_effect&quot;:&quot;yes&quot;,&quot;motion_fx_scale_speed&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:1,&quot;sizes&quot;:[]},&quot;motion_fx_scale_direction&quot;:&quot;out-in&quot;,&quot;motion_fx_scale_range&quot;:{&quot;unit&quot;:&quot;%&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:{&quot;start&quot;:20,&quot;end&quot;:80}},&quot;motion_fx_devices&quot;:[&quot;desktop&quot;,&quot;tablet&quot;,&quot;mobile&quot;]}" data-widget_type="naylatextwrapper.default">
 				<div class="elementor-widget-container">
@@ -1010,7 +1337,7 @@ I combine technical expertise with creative thinking to build intuitive, scalabl
 		<div class="elementor-element elementor-element-3520c90 e-con-full wrapper-wide section-normal e-flex default e-con e-child" data-id="3520c90" data-element_type="container" data-e-type="container">
 				</div>
 				</div>
-		<div class="anim-bg elementor-element elementor-element-05f083c e-con-full wrapper-wide section-normal e-flex default e-con e-parent" data-id="05f083c" data-element_type="container" data-e-type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+		<div class="elementor-element elementor-element-05f083c e-con-full wrapper-wide section-normal e-flex default e-con e-parent" data-id="05f083c" data-element_type="container" data-e-type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
 		<div class="elementor-element elementor-element-b3018c9 e-con-full wrapper-wide section-normal e-flex default e-con e-child" data-id="b3018c9" data-element_type="container" data-e-type="container" data-settings="{}">
 				<div class="elementor-element elementor-element-c452959 elementor-widget elementor-widget-naylatextwrapper" data-id="c452959" data-element_type="widget" data-e-type="widget" data-settings="{&quot;motion_fx_motion_fx_scrolling&quot;:&quot;yes&quot;,&quot;motion_fx_devices&quot;:[&quot;desktop&quot;,&quot;tablet&quot;,&quot;mobile&quot;]}" data-widget_type="naylatextwrapper.default">
 				<div class="elementor-widget-container">
@@ -1111,7 +1438,7 @@ I combine technical expertise with creative thinking to build intuitive, scalabl
 			</div>
 		</div>
 		</div>
-		<div class="anim-bg elementor-element elementor-element-e7bf2c1 e-con-full light elementor-hidden-tablet elementor-hidden-mobile wrapper-wide section-normal e-flex e-con e-parent" data-id="e7bf2c1" data-element_type="container" data-e-type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+		<div class="elementor-element elementor-element-e7bf2c1 e-con-full light elementor-hidden-tablet elementor-hidden-mobile wrapper-wide section-normal e-flex e-con e-parent" data-id="e7bf2c1" data-element_type="container" data-e-type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
 		<div class="elementor-element elementor-element-3283d4d e-con-full wrapper-wide section-normal e-flex default e-con e-child" data-id="3283d4d" data-element_type="container" data-e-type="container">
 				<div class="elementor-element elementor-element-b984932 elementor-widget elementor-widget-spacer" data-id="b984932" data-element_type="widget" data-e-type="widget" data-widget_type="spacer.default">
 							<div class="elementor-spacer">
@@ -1922,26 +2249,197 @@ Toolkit                </text-p>
 		<div id="e-n-tab-content-2427501784" role="tabpanel" aria-labelledby="e-n-tab-title-2427501784" data-tab-index="4" style="--n-tabs-title-order: 4;" class=" elementor-element elementor-element-301b105 wrapper-wide section-normal e-flex e-con-boxed default e-con e-child" data-id="301b105" data-element_type="container" data-e-type="container">
 					<div class="e-con-inner">
 		<div class="elementor-element elementor-element-726d1db e-con-full wrapper-wide section-normal e-flex default e-con e-child" data-id="726d1db" data-element_type="container" data-e-type="container">
-		<div class="elementor-element elementor-element-80cba54 e-con-full wrapper-wide section-normal e-flex default e-con e-child" data-id="80cba54" data-element_type="container" data-e-type="container">
-				<div class="elementor-element elementor-element-f0d80dd elementor-widget elementor-widget-image" data-id="f0d80dd" data-element_type="widget" data-e-type="widget" data-widget_type="image.default">
-															<img decoding="async" src="/assets/media/0101.webp" width="1400" height="1400" class="attachment-full size-full wp-image-10589" alt="Product packaging and label design showcase 01" />															</div>
+			<div class="hk-pkg-container">
+				<!-- Section Intro 1 -->
+				<div class="hk-pkg-intro">
+					<span class="hk-pkg-eyebrow">3D Mockups &amp; Commercial Packaging</span>
+					<h3 class="hk-pkg-curly-title">Brand Identity &amp; Retail Label Systems</h3>
+					<p class="hk-pkg-curly-desc">End-to-end commercial label designs, FMCG brand identity, and high-fidelity 3D packaging renders engineered for modern retail shelves and digital storefronts.</p>
 				</div>
-		<div class="elementor-element elementor-element-e6205f5 e-con-full wrapper-wide section-normal e-flex default e-con e-child" data-id="e6205f5" data-element_type="container" data-e-type="container">
-				<div class="elementor-element elementor-element-d011480 elementor-widget elementor-widget-image" data-id="d011480" data-element_type="widget" data-e-type="widget" data-widget_type="image.default">
-															<img decoding="async" src="/assets/media/0202.webp" width="1400" height="1400" class="attachment-full size-full wp-image-10590" alt="Product packaging and label design showcase 02" />															</div>
+
+				<!-- Section 1: Hero 3D Renders Showcase (6 Products - Blended to Screen, No Black Cards) -->
+				<div class="hk-pkg-hero-grid">
+					<!-- 1: Lemon Sparkling Can -->
+					<div class="hk-pkg-card elementor-widget-image">
+						<div class="hk-pkg-card-img-wrap">
+							<img decoding="async" src="/assets/media/packaging/lemon-sparkling-can.webp" width="367" height="487" alt="RAW Refresh Sparkling Lemon Can Label and 3D Packaging Design" />
+						</div>
+						<div class="hk-pkg-card-info">
+							<span class="hk-pkg-card-brand">RAW Refresh</span>
+							<h4 class="hk-pkg-card-name">Sparkling Lemon Drink</h4>
+							<p class="hk-pkg-card-meta">330ml Aluminum Can · Metallic Gloss Finish</p>
+						</div>
+					</div>
+
+					<!-- 2: Mango Juice Can -->
+					<div class="hk-pkg-card elementor-widget-image">
+						<div class="hk-pkg-card-img-wrap">
+							<img decoding="async" src="/assets/media/packaging/mango-juice-can.webp" width="443" height="612" alt="RAW Refresh Mango Juice Can Packaging Design" />
+						</div>
+						<div class="hk-pkg-card-info">
+							<span class="hk-pkg-card-brand">RAW Refresh</span>
+							<h4 class="hk-pkg-card-name">Natural Mango Juice</h4>
+							<p class="hk-pkg-card-meta">Citrus Pulp Palette · Matte Label Architecture</p>
+						</div>
+					</div>
+
+					<!-- 3: Coconut Water Can -->
+					<div class="hk-pkg-card elementor-widget-image">
+						<div class="hk-pkg-card-img-wrap">
+							<img decoding="async" src="/assets/media/packaging/coconut-water-can.webp" width="407" height="590" alt="RAW Refresh Coconut Water Can Label Mockup" />
+						</div>
+						<div class="hk-pkg-card-info">
+							<span class="hk-pkg-card-brand">RAW Refresh</span>
+							<h4 class="hk-pkg-card-name">Pure Coconut Water</h4>
+							<p class="hk-pkg-card-meta">Hydration Drink · Tropical Botanical Artwork</p>
+						</div>
+					</div>
+
+					<!-- 4: Whole Cashews Jar -->
+					<div class="hk-pkg-card elementor-widget-image">
+						<div class="hk-pkg-card-img-wrap">
+							<img decoding="async" src="/assets/media/packaging/cashews-jar.webp" width="543" height="724" alt="Arihant Stores Whole Cashews Premium Glass Jar Packaging" />
+						</div>
+						<div class="hk-pkg-card-info">
+							<span class="hk-pkg-card-brand">Arihant Stores</span>
+							<h4 class="hk-pkg-card-name">Whole Cashews Jar</h4>
+							<p class="hk-pkg-card-meta">Gourmet Food Jar · Foil Stamped Label</p>
+						</div>
+					</div>
+
+					<!-- 5: Roasted Almonds Jar -->
+					<div class="hk-pkg-card elementor-widget-image">
+						<div class="hk-pkg-card-img-wrap">
+							<img decoding="async" src="/assets/media/packaging/roasted-almonds-jar.webp" width="439" height="539" alt="Arihant Stores Roasted Almonds Glass Jar Label Design" />
+						</div>
+						<div class="hk-pkg-card-info">
+							<span class="hk-pkg-card-brand">Arihant Stores</span>
+							<h4 class="hk-pkg-card-name">California Roasted Almonds</h4>
+							<p class="hk-pkg-card-meta">Artisan Dry Fruits · Nutritional Grid Layout</p>
+						</div>
+					</div>
+
+					<!-- 6: Premium Pistachios Jar -->
+					<div class="hk-pkg-card elementor-widget-image">
+						<div class="hk-pkg-card-img-wrap">
+							<img decoding="async" src="/assets/media/packaging/pistachios-jar.webp" width="446" height="596" alt="Arihant Stores Pistachios Jar Packaging Design" />
+						</div>
+						<div class="hk-pkg-card-info">
+							<span class="hk-pkg-card-brand">Arihant Stores</span>
+							<h4 class="hk-pkg-card-name">Selected Pistachios</h4>
+							<p class="hk-pkg-card-meta">Airtight Pantry Jar · Sage Green Aesthetic</p>
+						</div>
+					</div>
 				</div>
+
+				<!-- Section Intro 2 -->
+				<div class="hk-pkg-intro" style="margin-top: 14px;">
+					<span class="hk-pkg-eyebrow">Separated Product SKUs</span>
+					<h3 class="hk-pkg-curly-title">Individual Retail SKUs &amp; Label Details</h3>
+					<p class="hk-pkg-curly-desc">Each product SKU precision-crafted with unique color palettes, typography, barcoding, and regulatory nutritional compliance.</p>
 				</div>
-		<div class="elementor-element elementor-element-187f1f6 e-con-full wrapper-wide section-normal e-flex default e-con e-child" data-id="187f1f6" data-element_type="container" data-e-type="container">
-				<div class="elementor-element elementor-element-a7361e8 elementor-widget elementor-widget-button" data-id="a7361e8" data-element_type="widget" data-e-type="widget" data-widget_type="button.default">
-										<a class="elementor-button elementor-button-link elementor-size-sm elementor-animation-shrink" href="https://www.linkedin.com/in/harikarthick12/" target="_blank" rel="noopener noreferrer">
-						<span class="elementor-button-content-wrapper">
-						<span class="elementor-button-icon">
-				<i aria-hidden="true" class="material-icons md-arrow_outward" data-md-icon="arrow_outward"></i>			</span>
-									<span class="elementor-button-text">View Label Designs</span>
-					</span>
-					</a>
-								</div>
+
+				<!-- Section 2: 8 Individual Segmented Products (Blended to Screen, No Black Cards) -->
+				<div class="hk-pkg-eight-grid">
+					<!-- SKU 1: Goan Cashews -->
+					<div class="hk-pkg-mini-card elementor-widget-image">
+						<div class="hk-pkg-mini-img-wrap">
+							<img decoding="async" src="/assets/media/packaging/goan-cashews-jar.webp" width="260" height="280" alt="Goan Cashews Jar Label Design" />
+						</div>
+						<span class="hk-pkg-mini-brand">Arihant Stores</span>
+						<h5 class="hk-pkg-mini-title">Goan Cashews</h5>
+						<span class="hk-pkg-mini-badge">100% Natural Whole Kernels</span>
+					</div>
+
+					<!-- SKU 2: California Almonds -->
+					<div class="hk-pkg-mini-card elementor-widget-image">
+						<div class="hk-pkg-mini-img-wrap">
+							<img decoding="async" src="/assets/media/packaging/california-almonds-jar.webp" width="260" height="280" alt="California Almonds Jar Label Design" />
+						</div>
+						<span class="hk-pkg-mini-brand">Arihant Stores</span>
+						<h5 class="hk-pkg-mini-title">California Almonds</h5>
+						<span class="hk-pkg-mini-badge">High Dietary Fiber</span>
+					</div>
+
+					<!-- SKU 3: Premium Pistachios -->
+					<div class="hk-pkg-mini-card elementor-widget-image">
+						<div class="hk-pkg-mini-img-wrap">
+							<img decoding="async" src="/assets/media/packaging/premium-pistachios-jar.webp" width="260" height="280" alt="Premium Pistachios Jar Label Design" />
+						</div>
+						<span class="hk-pkg-mini-brand">Arihant Stores</span>
+						<h5 class="hk-pkg-mini-title">Premium Pistachios</h5>
+						<span class="hk-pkg-mini-badge">Roasted &amp; Lightly Salted</span>
+					</div>
+
+					<!-- SKU 4: Coconut Water Upright -->
+					<div class="hk-pkg-mini-card elementor-widget-image">
+						<div class="hk-pkg-mini-img-wrap">
+							<img decoding="async" src="/assets/media/packaging/coconut-water-can-upright.webp" width="260" height="280" alt="Coconut Water Can Upright Design" />
+						</div>
+						<span class="hk-pkg-mini-brand">RAW Refresh</span>
+						<h5 class="hk-pkg-mini-title">Coconut Water</h5>
+						<span class="hk-pkg-mini-badge">No Added Sugar</span>
+					</div>
+
+					<!-- SKU 5: Cold Brew Coffee -->
+					<div class="hk-pkg-mini-card elementor-widget-image">
+						<div class="hk-pkg-mini-img-wrap">
+							<img decoding="async" src="/assets/media/packaging/cold-brew-coffee-can.webp" width="260" height="280" alt="Cold Brew Coffee Can Packaging Design" />
+						</div>
+						<span class="hk-pkg-mini-brand">RAW Refresh</span>
+						<h5 class="hk-pkg-mini-title">Cold Brew Coffee</h5>
+						<span class="hk-pkg-mini-badge">Single Origin Arabica</span>
+					</div>
+
+					<!-- SKU 6: Mango Juice Upright -->
+					<div class="hk-pkg-mini-card elementor-widget-image">
+						<div class="hk-pkg-mini-img-wrap">
+							<img decoding="async" src="/assets/media/packaging/mango-juice-can-upright.webp" width="260" height="280" alt="Mango Juice Can Upright Design" />
+						</div>
+						<span class="hk-pkg-mini-brand">RAW Refresh</span>
+						<h5 class="hk-pkg-mini-title">Mango Juice</h5>
+						<span class="hk-pkg-mini-badge">100% Natural Fruit Pulp</span>
+					</div>
+
+					<!-- SKU 7: Whey Protein -->
+					<div class="hk-pkg-mini-card elementor-widget-image">
+						<div class="hk-pkg-mini-img-wrap">
+							<img decoding="async" src="/assets/media/packaging/whey-protein-tub.webp" width="260" height="280" alt="Whey Protein Tub Packaging Design" />
+						</div>
+						<span class="hk-pkg-mini-brand">RAW Nutrition</span>
+						<h5 class="hk-pkg-mini-title">Whey Protein Tub</h5>
+						<span class="hk-pkg-mini-badge">24g Protein · Rich Cocoa</span>
+					</div>
+
+					<!-- SKU 8: Pure Green Tea -->
+					<div class="hk-pkg-mini-card elementor-widget-image">
+						<div class="hk-pkg-mini-img-wrap">
+							<img decoding="async" src="/assets/media/packaging/green-tea-canister.webp" width="260" height="280" alt="Green Tea Canister Packaging Design" />
+						</div>
+						<span class="hk-pkg-mini-brand">Arihant Stores</span>
+						<h5 class="hk-pkg-mini-title">Pure Green Tea</h5>
+						<span class="hk-pkg-mini-badge">25 Eco Tea Bags</span>
+					</div>
 				</div>
+
+				<!-- Action button -->
+				<div class="hk-pkg-action">
+					<div class="elementor-element elementor-element-a7361e8 elementor-widget elementor-widget-button" data-id="a7361e8" data-element_type="widget" data-e-type="widget" data-widget_type="button.default">
+						<a class="elementor-button elementor-button-link elementor-size-sm elementor-animation-shrink" href="https://www.linkedin.com/in/harikarthick12/" target="_blank" rel="noopener noreferrer">
+							<span class="elementor-button-content-wrapper">
+								<span class="elementor-button-icon">
+									<i aria-hidden="true" class="material-icons md-arrow_outward" data-md-icon="arrow_outward"></i>
+								</span>
+								<span class="elementor-button-text">Connect for Packaging &amp; Brand Design</span>
+							</span>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+				</div>
+			</div>
+		</div>
 					</div>
 				</div>
 					</div>
@@ -1951,57 +2449,6 @@ Toolkit                </text-p>
 				</div>
 				</div>
 				</div>
-				</div>
-		<div class="anim-bg elementor-element elementor-element-338c244 e-con-full elementor-hidden-tablet elementor-hidden-mobile wrapper-wide section-normal e-flex default e-con e-parent" data-id="338c244" data-element_type="container" data-e-type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
-				<div class="elementor-element elementor-element-061cbf9 elementor-widget elementor-widget-naylatextwrapper" data-id="061cbf9" data-element_type="widget" data-e-type="widget" data-settings="{&quot;motion_fx_motion_fx_scrolling&quot;:&quot;yes&quot;,&quot;motion_fx_translateY_effect&quot;:&quot;yes&quot;,&quot;motion_fx_translateY_speed&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:1.5,&quot;sizes&quot;:[]},&quot;motion_fx_translateY_affectedRange&quot;:{&quot;unit&quot;:&quot;%&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:{&quot;start&quot;:0,&quot;end&quot;:73}},&quot;motion_fx_scale_effect&quot;:&quot;yes&quot;,&quot;motion_fx_scale_speed&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:1,&quot;sizes&quot;:[]},&quot;motion_fx_scale_direction&quot;:&quot;out-in&quot;,&quot;motion_fx_scale_range&quot;:{&quot;unit&quot;:&quot;%&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:{&quot;start&quot;:20,&quot;end&quot;:80}},&quot;motion_fx_devices&quot;:[&quot;desktop&quot;,&quot;tablet&quot;,&quot;mobile&quot;]}" data-widget_type="naylatextwrapper.default">
-				<div class="elementor-widget-container">
-					
-
-
-        <div class="text-wrapper  ">
-
-                            <text-p class="   false" data-stagger="0.1" data-duration="1.5" data-delay="0" data-scrub="false" data-pin="false">
-                    Great Things <br>Begin Together.                </text-p>
-
-            
-
-
-
-        </div>
-
-
-        				</div>
-				</div>
-				<div class="elementor-element elementor-element-5523e93 elementor-widget elementor-widget-naylatextwrapper" data-id="5523e93" data-element_type="widget" data-e-type="widget" data-widget_type="naylatextwrapper.default">
-				<div class="elementor-widget-container">
-					
-
-
-        <div class="text-wrapper  ">
-
-                            <text-p class="   false" data-stagger="0.1" data-duration="1.5" data-delay="0" data-scrub="false" data-pin="false">
-                    From Creative Collaborations to New Opportunities,<br>Let’s make Something Meaningful happen.                </text-p>
-
-            
-
-
-
-        </div>
-
-
-        				</div>
-				</div>
-				<div class="elementor-element elementor-element-ba2656a elementor-align-center elementor-widget elementor-widget-button" data-id="ba2656a" data-element_type="widget" data-e-type="widget" data-widget_type="button.default">
-										<a class="elementor-button elementor-button-link elementor-size-sm elementor-animation-shrink" href="https://www.linkedin.com/in/harikarthick12/" target="_blank" rel="noopener noreferrer">
-						<span class="elementor-button-content-wrapper">
-						<span class="elementor-button-icon">
-				<i aria-hidden="true" class="material-icons md-arrow_outward" data-md-icon="arrow_outward"></i>			</span>
-									<span class="elementor-button-text">Let's Connect</span>
-					</span>
-					</a>
-								</div>
-				</div>
-		<div class="anim-bg elementor-element elementor-element-15c1adf e-con-full elementor-hidden-tablet elementor-hidden-mobile wrapper-wide section-normal e-flex default e-con e-parent" data-id="15c1adf" data-element_type="container" data-e-type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
 				</div>
 		<div class="elementor-element elementor-element-7ebe16d e-con-full elementor-hidden-desktop wrapper-wide section-normal e-flex default e-con e-parent" data-id="7ebe16d" data-element_type="container" data-e-type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
 				<div class="elementor-element elementor-element-4dca687 elementor-widget elementor-widget-naylatextwrapper" data-id="4dca687" data-element_type="widget" data-e-type="widget" data-widget_type="naylatextwrapper.default">
@@ -2082,7 +2529,7 @@ For the Best experience,<BR> Please Visit on a Desktop or Laptop.               
 <footer id="footer" class="site-footer section">
 
     		<div data-elementor-type="footer-type" data-elementor-id="1710" class="elementor elementor-1710" data-elementor-settings="{&quot;element_pack_global_tooltip_width&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;element_pack_global_tooltip_width_tablet&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;element_pack_global_tooltip_width_mobile&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;element_pack_global_tooltip_padding&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;top&quot;:&quot;&quot;,&quot;right&quot;:&quot;&quot;,&quot;bottom&quot;:&quot;&quot;,&quot;left&quot;:&quot;&quot;,&quot;isLinked&quot;:true},&quot;element_pack_global_tooltip_padding_tablet&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;top&quot;:&quot;&quot;,&quot;right&quot;:&quot;&quot;,&quot;bottom&quot;:&quot;&quot;,&quot;left&quot;:&quot;&quot;,&quot;isLinked&quot;:true},&quot;element_pack_global_tooltip_padding_mobile&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;top&quot;:&quot;&quot;,&quot;right&quot;:&quot;&quot;,&quot;bottom&quot;:&quot;&quot;,&quot;left&quot;:&quot;&quot;,&quot;isLinked&quot;:true},&quot;element_pack_global_tooltip_border_radius&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;top&quot;:&quot;&quot;,&quot;right&quot;:&quot;&quot;,&quot;bottom&quot;:&quot;&quot;,&quot;left&quot;:&quot;&quot;,&quot;isLinked&quot;:true},&quot;element_pack_global_tooltip_border_radius_tablet&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;top&quot;:&quot;&quot;,&quot;right&quot;:&quot;&quot;,&quot;bottom&quot;:&quot;&quot;,&quot;left&quot;:&quot;&quot;,&quot;isLinked&quot;:true},&quot;element_pack_global_tooltip_border_radius_mobile&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;top&quot;:&quot;&quot;,&quot;right&quot;:&quot;&quot;,&quot;bottom&quot;:&quot;&quot;,&quot;left&quot;:&quot;&quot;,&quot;isLinked&quot;:true}}" data-elementor-post-type="elementor_library">
-				<div class="anim-bg elementor-element elementor-element-95dead4 e-con-full elementor-hidden-tablet elementor-hidden-mobile wrapper-wide section-normal e-flex default e-con e-parent" data-id="95dead4" data-element_type="container" data-e-type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+				<div class="elementor-element elementor-element-95dead4 e-con-full elementor-hidden-tablet elementor-hidden-mobile wrapper-wide section-normal e-flex default e-con e-parent" data-id="95dead4" data-element_type="container" data-e-type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
 		<div class="elementor-element elementor-element-b2c0ed0 e-con-full wrapper-wide section-normal e-flex default e-con e-child" data-id="b2c0ed0" data-element_type="container" data-e-type="container">
 		<div class="elementor-element elementor-element-c63ad4e e-con-full wrapper-wide section-normal e-flex default e-con e-child" data-id="c63ad4e" data-element_type="container" data-e-type="container">
 				<div class="elementor-element elementor-element-243e7dd elementor-widget__width-initial elementor-widget elementor-widget-heading" data-id="243e7dd" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
@@ -2376,7 +2823,6 @@ document.addEventListener("DOMContentLoaded", function () {
    4. Visual Archive — infinite horizontal marquee
    5. Creative Toolkit — heading scale entrance
    6. Video Editing — autoplay on viewport enter
-   7. CTA "Great Things Begin Together" — fade+scale
    8. Footer — fade-in
    9. General parallax images
    ===================================================== */
@@ -2581,21 +3027,21 @@ document.addEventListener('DOMContentLoaded', function () {
             gsap.fromTo(beyondTitle,
                 {
                     x: function () {
-                        return Math.round(Math.min(window.innerWidth * 0.35, 480));
+                        return Math.round(window.innerWidth * 0.45);
                     }
                 },
                 {
                     x: function () {
-                        var tw = beyondTitle.offsetWidth || 1500;
+                        var tw = beyondTitle.scrollWidth || beyondTitle.offsetWidth || 1500;
                         var vw = window.innerWidth || 1440;
-                        return tw > vw ? -(tw - vw + 60) : -Math.round(vw * 0.08);
+                        return -(tw - vw + Math.round(vw * 0.35));
                     },
                     ease: 'none',
                     scrollTrigger: {
-                        trigger: '[data-id="af59bb9"]',
-                        start: 'top 98%',
-                        end: 'bottom 5%',
-                        scrub: 0.6,
+                        trigger: '[data-id="e7bf2c1"]',
+                        start: 'top 85%',
+                        end: 'bottom 20%',
+                        scrub: 1.2,
                         invalidateOnRefresh: true
                     }
                 }
@@ -2697,45 +3143,6 @@ document.addEventListener('DOMContentLoaded', function () {
                 duration: 0.8,
                 ease: 'power3.out'
             });
-        }
-
-        /* ==========================================
-           7. CTA "Great Things Begin Together"
-              Headline: stagger text-p elements in
-              Button: scale pop-in
-        ========================================== */
-        var ctaSection = document.querySelector('[data-id="338c244"]');
-        if (ctaSection) {
-            var ctaTexts = ctaSection.querySelectorAll('text-p');
-            if (ctaTexts.length) {
-                gsap.from(ctaTexts, {
-                    scrollTrigger: {
-                        trigger: ctaSection,
-                        start: 'top 80%',
-                        toggleActions: 'play none none none'
-                    },
-                    opacity: 0,
-                    y: 70,
-                    stagger: 0.22,
-                    duration: 1.3,
-                    ease: 'power3.out'
-                });
-            }
-            var ctaBtn = ctaSection.querySelector('.elementor-button');
-            if (ctaBtn) {
-                gsap.from(ctaBtn, {
-                    scrollTrigger: {
-                        trigger: ctaBtn,
-                        start: 'top 92%',
-                        toggleActions: 'play none none none'
-                    },
-                    opacity: 0,
-                    scale: 0.75,
-                    y: 30,
-                    duration: 1,
-                    ease: 'back.out(2.2)'
-                });
-            }
         }
 
         /* ==========================================
@@ -2858,21 +3265,7 @@ document.addEventListener('DOMContentLoaded', function () {
             });
         }
 
-        /* ==========================================
-           12. anim-bg sections — subtle background drift
-        ========================================== */
-        document.querySelectorAll('.anim-bg').forEach(function (sec) {
-            gsap.to(sec, {
-                scrollTrigger: {
-                    trigger: sec,
-                    scrub: 2,
-                    start: 'top bottom',
-                    end: 'bottom top'
-                },
-                backgroundPositionY: '25%',
-                ease: 'none'
-            });
-        });
+        
 
     } // end initScrollAnimations
 }); // end DOMContentLoaded

@@ -4634,7 +4634,7 @@
 
 
 
-            if ($scope.hasClass('anim-bg')) {
+            if (false && $scope.hasClass('anim-bg')) {
 
                 var $this = $scope,
                     cl = $this.css('background-color').split(' '),
